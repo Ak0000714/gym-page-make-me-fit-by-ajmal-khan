@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>make me fit chest workout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        h1{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+
+
+        }
+        h2 {
+            background-color: rgb(28, 26, 26);
+             color:rgb(245, 245, 244);
+            font-family:'Times New Roman', Times, serif;
+            text-align: center;
+            text-decoration-line: underline;
+            padding: 20px;
+        }
+     p{
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: medium;
+        font-weight: bold;
+     }
+     img{
+        height:400px;
+        width: 400px;
+        image-resolution:100px;
+        border-radius: 10%;
+        align-items:center;
+     }
+     .timer {
+  font-size: 80px;
+}
+.time-buttons button{
+   /* Button style goes here */
+}
+    body{
+        background-color:lightgray;
+    }
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+ol{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight:bolder;
+    text-decoration: solid;
+    text-align: left;
+
+    
+}
+        
+    </style>
+</head>
+<body>
+    <h1> CHEST WORKOUT</h1>
+    <p>Training your pectoral muscles will improve the strength in your back muscles and it can help you get stronger in movements that require pressing. It is good to keep these muscles strong to maintain good posture and for all your daily activities.</p>
+    <h2> BRENCH PRESS (8 minutes)</h2>
+    <img src="bench-press.gif" alt="bench press">
+    <ol>
+        <li>Perform 3 sets of bench press</li>
+        <li>Set 1: 12 reps with a warm-up weight.</li>
+        <li>Set 2: 10 reps with a slightly heavier weight.</li>
+        <li>Set 3: 8 reps with a challenging weight.</li>
+        <li>Rest for 60-90 seconds between sets.</li>
+        <li>Focus on proper form, with a controlled descent and powerful push.</li>
+    </ol>    
+    <a herf="" ></a>
+    <h2> PUSH UP(7 minutes)</h2>
+    <img src="push.gif" alt="bench press">
+    <ol>
+        <li>Perform 3 sets of push-ups.</li>
+        <li>Set 1: 15 reps (adjust difficulty as needed).</li>
+        <li>Set 2: 12 reps.</li>
+        <li>Set 3: 10 reps.</li>
+        <li>Rest for 30-60 seconds between sets.</li>
+        <li>Maintain a straight line from head to heels while doing push-ups.
+        </li>
+    </ol>  
+    <a herf="" ></a>  
+    <h2> DUMBBELL FLYES ( 6minutes)</h2>
+    <img src="dumfly.gif" alt="bench press">
+    <ol>
+        <li>Perform 3 sets of dumbbell flyes.</li>
+        <li>Set 1: 12 reps.</li>
+        <li>Set 2: 10 reps</li>
+        <li>Set 3: 8 reps.</li>
+        <li>Rest for 60 seconds between sets.</li>
+        <li>Focus on the stretch and squeeze of the chest muscles.
+        </li>
+    </ol>    
+    <a herf="" ></a>
+    <h2> INCLINE BENCH PRESS ( 4 minutes)</h2> 
+    <img src="incline.gif" alt="bench press">
+    <ol>
+        <li> Perform 2 sets of incline bench press.</li>
+        <li>Set 1: 10 reps.</li>
+        <li>Set 2: 8 reps.</li>
+        <li>Rest for 60 seconds between sets</li>
+        <li> Adjust the bench to a 30-45 degree incline to target the upper chest.</li>
+    </ol>    
+    <a herf="" ></a>
+    <div class="jumbotron text-center">
+        <div class="timer">
+          <span class="minutes">
+            00
+          </span>
+          :
+          <span class="seconds">
+            00
+          </span>
+        </div>
+        <div class="time-buttons">
+          <button class="btn btn-lg btn-success" data-action="start">
+            Start
+          </button>
+          <button class="btn btn-lg btn-danger" data-action="stop">
+            Stop
+          </button>
+          <button class="btn btn-lg btn-link btn-block" data-action="reset">
+            Reset
+          </button>
+        </div>
+      </div>
+    <script>
+        const btnStartElement = document.querySelector('[data-action="start"]');
+const btnStopElement = document.querySelector('[data-action="stop"]');
+const btnResetElement = document.querySelector('[data-action="reset"]');
+const minutes = document.querySelector('.minutes');
+const seconds = document.querySelector('.seconds');
+let timerTime = 0;
+let interval;
+
+
+const start = () => {
+  isRunning = true;
+  interval = setInterval(incrementTimer, 1000)
+}
+
+const stop = () => {
+  isRunning = false;
+  clearInterval(interval);
+}
+
+const reset = () => {
+  minutes.innerText = '00';
+  seconds.innerText = '00';
+}
+
+const pad = (number) => {
+  return (number < 10) ? '0' + number : number;
+}
+
+const incrementTimer = () => {
+  timerTime++;
+  
+  const numberMinutes = Math.floor(timerTime / 60);
+  const numberSeconds = timerTime % 60;
+  
+  minutes.innerText = pad(numberMinutes);
+  seconds.innerText = pad(numberSeconds);
+}
+
+btnStartElement.addEventListener('click', startTimer = () => {
+  start();
+});
+
+btnStopElement.addEventListener('click', stopTimer = () => {
+  stop();
+});
+
+btnResetElement.addEventListener('click', stopTimer = () => {
+  reset();
+});
+
+    </script>
+    <footer>
+        <p> @make me fit 2023 Remember to consult a fitness professional before starting any exercise program.</p>
+    </footer>
+</body>
+</html>

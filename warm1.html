@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>make me fit chest workout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        h1{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+
+
+        }
+        h2 {
+            background-color: rgb(28, 26, 26);
+             color:rgb(245, 245, 244);
+            font-family:'Times New Roman', Times, serif;
+            text-align: center;
+            text-decoration-line: underline;
+            padding: 20px;
+        }
+     p{
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: medium;
+        font-weight: bold;
+     }
+     img{
+        height:400px;
+        width: 400px;
+        image-resolution:100px;
+        border-radius: 10%;
+        align-items:center;
+     }
+     .timer {
+  font-size: 80px;
+}
+.time-buttons button{
+   /* Button style goes here */
+}
+    body{
+        background-color:lightgray;
+    }
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+ol{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight:bolder;
+    text-decoration: solid;
+    text-align: left;
+
+
+}
+        
+    </style>
+</head>
+<body>
+    <h1>WARM UPS</h1>
+    <p></p>
+    <h2>Jumping Jacks (2 minutes)</h2>
+    <img src="jumping.gif" alt="warm up">
+    <ol>
+        <li>Start with your feet together and arms at your sides.</li>
+         <li> - Jump while spreading your legs and raising your arms overhead.</li>
+           <li> - Return to the starting position by jumping again.</li>
+            <li></li>- This exercise raises your heart rate and warms up your entire body.</li>
+    </ol>   
+    <h2>Arm Circles (1 minute)</h2>
+    <img src="Arm-circles.gif" alt="warm up">
+    <ol>
+      <li> Extend your arms out to the sides</li>.
+        <li>- Make small circles with your arms, gradually increasing the circle size.</li>
+        <li>- After 30 seconds, reverse the direction of the circles.</li>
+        -<li>This warms up your shoulder joints and upper body.</li>
+     
+    </ol>   
+    <h2>Leg Swings (1 minute each leg)</h2>
+    <img src="lgs.gif" alt="warm up">
+    <img src="lgs1.gif" alt="warm up">
+    <ol>
+        <li>Hold onto a stable surface for balance.</li>
+            <li>- Swing one leg forward and backward in a controlled manner</li>.
+            <li>- After 30 seconds, switch to the other leg.</li>
+            <li>This stretches and warms up your hip and leg muscles.</li>
+    </ol>   
+    <h2>Bodyweight Squats (1 minute):</h2>
+    <img src="bdy.gif" alt="warm up">
+    <ol>
+        <li> Stand with your feet shoulder-width apart</li>
+           <li> - Lower your body by bending your knees, as if you're sitting in a chair.</li>
+           <li>- Keep your back straight and chest up.</li>
+            <li>- Rise back up to the starting position.</li>
+            <li>- This prepares your legs and lower back for squats or leg exercises.</li>
+    </ol>   
+     
+    <div class="jumbotron text-center">
+        <div class="timer">
+          <span class="minutes">
+            00
+          </span>
+          :
+          <span class="seconds">
+            00
+          </span>
+        </div>
+        <div class="time-buttons">
+          <button class="btn btn-lg btn-success" data-action="start">
+            Start
+          </button>
+          <button class="btn btn-lg btn-danger" data-action="stop">
+            Stop
+          </button>
+          <button class="btn btn-lg btn-link btn-block" data-action="reset">
+            Reset
+          </button>
+        </div>
+      </div>
+    <script>
+        const btnStartElement = document.querySelector('[data-action="start"]');
+const btnStopElement = document.querySelector('[data-action="stop"]');
+const btnResetElement = document.querySelector('[data-action="reset"]');
+const minutes = document.querySelector('.minutes');
+const seconds = document.querySelector('.seconds');
+let timerTime = 0;
+let interval;
+
+
+const start = () => {
+  isRunning = true;
+  interval = setInterval(incrementTimer, 1000)
+}
+
+const stop = () => {
+  isRunning = false;
+  clearInterval(interval);
+}
+
+const reset = () => {
+  minutes.innerText = '00';
+  seconds.innerText = '00';
+}
+
+const pad = (number) => {
+  return (number < 10) ? '0' + number : number;
+}
+
+const incrementTimer = () => {
+  timerTime++;
+  
+  const numberMinutes = Math.floor(timerTime / 60);
+  const numberSeconds = timerTime % 60;
+  
+  minutes.innerText = pad(numberMinutes);
+  seconds.innerText = pad(numberSeconds);
+}
+
+btnStartElement.addEventListener('click', startTimer = () => {
+  start();
+});
+
+btnStopElement.addEventListener('click', stopTimer = () => {
+  stop();
+});
+
+btnResetElement.addEventListener('click', stopTimer = () => {
+  reset();
+});
+
+    </script>
+    <footer>
+        <p> @make me fit 2023 Remember to consult a fitness professional before starting any exercise program.</p>
+    </footer>
+</body>
+</html>

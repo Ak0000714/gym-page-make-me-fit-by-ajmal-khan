@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MAKE ME FIT LOGIN </title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background-image:url(cd.jpg);
+  background-size:inherit;
+}
+.wrapper{
+  width: 330px;
+  padding: 2rem 0 1rem 0;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow:  1 20px 35px rgba(0, 0, 0, 0.1);
+}
+h1{
+  font-size: 2rem;
+  color: #07001f;
+}
+p{
+  margin-bottom: 1.7rem;
+}
+form input{
+  width: 85%;
+  outline: none;
+  border: none;
+  background: #dfe9f5;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+button{
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  padding: 8px 0;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 85%;
+  background: tomato;
+  color: #fff;
+  cursor: pointer;
+}
+button:hover{
+  background: rgba(122, 30, 30, 0.767);
+}
+.or{
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  border-radius:20%;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+  border-radius:10%;
+}
+  </style></head>
+<body>
+  <div class="wrapper">
+    <h1> MAKE ME FIT</h1>
+ 
+    <form method="post">
+     Name
+     <input type="text" name="fname" required><br>
+     Gmail <br><input type="email" email="femail" required><br>
+    Password<input type="password" password="fpassword" required>
+    <a herf="index.html"><button value="sign" placeholder="index.html">Sign in</button><br></a>
+  
+    <b>
+      ----- or continue with ----
+    </b>
+    <div>
+      <a href="https://accounts.google.com" class="fa fa-google"></a>
+      <a href="https://www.facebook.com/login/" class="fa fa-facebook"></a>
+    </div>
+</form>
+</body>
+</html>
+
